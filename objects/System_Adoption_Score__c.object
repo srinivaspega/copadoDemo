@@ -164,4 +164,61 @@
     <searchLayouts/>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
+    <fields>
+        <fullName>Recent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Recent</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Weightage__c</fullName>
+        <externalId>false</externalId>
+        <label>Weightage</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Object_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Object Name</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Process_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Process Type</label>
+        <length>250</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Records_Growth__c</fullName>
+        <description>This field is used to check the growth in last 30 and 60 days created records.</description>
+        <externalId>false</externalId>
+        <formula>IF ( Number_of_Records__c!=0,((Number_of_Records_In_Last_90_Days__c - Number_of_Records_In_Last_30_Days__c )/Number_of_Records__c),0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Records Growth</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
 </CustomObject>
